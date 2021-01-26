@@ -8,11 +8,11 @@
       @maxlength={{this.MAX}} class="form-control mb-3" rows="4" @value={{this.content}}/>
     <div class="alert alert-info">Il vous reste {{this.size}} caractères à saisir.</div>
     {{#if this.info}}
+      <div class="alert alert-{{this.style}}"></div>
       <div class="alert alert-info">{{this.info}}</div>
     {{/if}}
   </div>
   <button class="btn btn-primary" {{action "save"}}>Enregistrer</button>
-  <button class="btn btn-primary" {{action "open"}}>Ouvrir</button>
   <button class="btn btn-primary" {{action "clear"}}>Effacer</button>
 </div>
 {{outlet}}
